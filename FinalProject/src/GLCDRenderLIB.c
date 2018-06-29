@@ -138,19 +138,19 @@ void draw_TEXEL(unsigned int x_, unsigned int y_, unsigned int dir_, TEXEL_CONTE
 {
 	switch(type_)
 	{
-		case PLAYER:
+		case TC_PLAYER:
 			GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap_player);
 			break;
-		case ZOMBIE:
+		case TC_ZOMBIE:
 			GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap_zombie);
 			break;
-		case GHOST:
+		case TC_GHOST:
 			GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap_ghost);
 			break;
-		case RAT:
+		case TC_RAT:
 			GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap_rat);
 			break;
-		case POTION:
+		case TC_POTION:
 			GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap_potion);
 			break;
 	}
