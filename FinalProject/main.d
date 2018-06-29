@@ -1,0 +1,16 @@
+main.o: src\main.c
+main.o: c:\Software\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h
+main.o: c:\Software\Keil\ARM\CMSIS\Include\core_cm3.h
+main.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h
+main.o: c:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h
+main.o: c:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h
+main.o: c:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
+main.o: c:\Software\Keil\ARM\RV31\INC\RTL.h
+main.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\stdio.h
+main.o: src\uart.h
+main.o: src\GLCD.h
+main.o: src\led.h
+main.o: src\delay.h
+main.o: src\Controller.h
+main.o: src\GLCDRenderLIB.h
+main.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\stdbool.h

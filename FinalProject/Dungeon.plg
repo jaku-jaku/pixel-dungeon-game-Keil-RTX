@@ -1,0 +1,2410 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+N:\2B\MTE 241\FinalProject\Dungeon.uvproj
+Project File Date:  06/26/2018
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=10972 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11000 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11000 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=10972 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(93): error:  #268: declaration may not appear after executable statement in block
+src\main.c(94): error:  #268: declaration may not appear after executable statement in block
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11032 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11032 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11032 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11032 RO-data=6556 RW-data=148 ZI-data=13020  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(19): error:  #65: expected a ";"
+src\main.c(20): error:  #65: expected a ";"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11132 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11120 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+linking...
+Program Size: Code=11056 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+linking...
+Program Size: Code=11056 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+linking...
+Program Size: Code=11036 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling main.c...
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling timer.c...
+compiling uart.c...
+compiling Controller.c...
+src\Controller.c(107): warning:  #61-D: integer operation result is out of range
+src\Controller.c(107): warning:  #68-D: integer conversion resulted in a change of sign
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=11036 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 3 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=10908 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(61): warning:  #177-D: variable "isWall" was declared but never referenced
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+linking...
+Program Size: Code=11036 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(95): warning:  #177-D: variable "isWall" was declared but never referenced
+linking...
+Program Size: Code=11044 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11136 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\GLCDRenderLIB.h(7): error:  #20: identifier "TEXEL_CONTENT" is undefined
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(2): error:  #5: cannot open source input file "bst.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(2): error:  #5: cannot open source input file "bst.h": No such file or directory
+Target not created
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(24): error:  #20: identifier "MAP_TEXEL_AREA" is undefined
+src\GLCDRenderLIB.c(136): error:  #20: identifier "TEXEL_CONTENT" is undefined
+src\GLCDRenderLIB.c(140): error:  #20: identifier "PLAYER" is undefined
+src\GLCDRenderLIB.c(141): error:  #20: identifier "MAP_TEXEL_W" is undefined
+src\GLCDRenderLIB.c(141): error:  #20: identifier "MAP_TEXEL_H" is undefined
+src\GLCDRenderLIB.c(143): error:  #20: identifier "ZOMBIE" is undefined
+src\GLCDRenderLIB.c(146): error:  #20: identifier "GHOST" is undefined
+src\GLCDRenderLIB.c(149): error:  #20: identifier "RAT" is undefined
+src\GLCDRenderLIB.c(152): error:  #20: identifier "POTION" is undefined
+Target not created
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(137): error:  #20: identifier "TEXEL_CONTENT" is undefined
+src\GLCDRenderLIB.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(137): error:  #20: identifier "TEXEL_CONTENT" is undefined
+Target not created
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=11152 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11424 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11424 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11152 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11152 RO-data=6556 RW-data=148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11432 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11432 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11432 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11432 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(137): error:  #20: identifier "TEXEL_CONTENT" is undefined
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=11432 RO-data=6556 RW-data=4148 ZI-data=13036  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11544 RO-data=6556 RW-data=4152 ZI-data=13080  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11548 RO-data=6556 RW-data=4152 ZI-data=13080  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(192): error:  #20: identifier "cx" is undefined
+src\main.c(193): error:  #20: identifier "cy" is undefined
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11652 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11664 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11668 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(119): error:  #20: identifier "bulletQuant" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11696 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11704 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11720 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11720 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11724 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11724 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11724 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11724 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(255): error:  #53: expected a ":"
+src\main.c(258): warning:  #12-D: parsing restarts here after previous syntax error
+src\main.c(270): error:  #20: identifier "isWalkable" is undefined
+src\main.c(270): error:  #20: identifier "y" is undefined
+src\main.c(270): error:  #20: identifier "x" is undefined
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling main.c...
+src\main.c(270): error:  #20: identifier "y" is undefined
+src\main.c(270): error:  #20: identifier "x" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11976 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11980 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(108): error:  #165: too few arguments in function call
+src\main.c(198): error:  #165: too few arguments in function call
+src\main.c(283): error:  #165: too few arguments in function call
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12024 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12012 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11968 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12016 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11968 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11968 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=11972 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12016 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\GLCD.h(55): error:  #130: expected a "{"
+src\delay.h(5): warning:  #12-D: parsing restarts here after previous syntax error
+src\main.c(145): warning:  #223-D: function "LED_set" declared implicitly
+src\main.c(149): warning:  #223-D: function "LED_clear" declared implicitly
+src\main.c(345): warning:  #223-D: function "LED_setup" declared implicitly
+compiling GLCD_Scroll.c...
+src\glcd.h(55): error:  #130: expected a "{"
+src\GLCD_Scroll.c(30): warning:  #12-D: parsing restarts here after previous syntax error
+src\GLCD_Scroll.c(37): error:  #20: identifier "cache_start" is undefined
+src\GLCD_Scroll.c(38): error:  #20: identifier "cache_size" is undefined
+src\GLCD_Scroll.c(39): error:  #20: identifier "last_col_cahche" is undefined
+src\GLCD_Scroll.c(40): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(41): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(46): error:  #20: identifier "cache_start" is undefined
+src\GLCD_Scroll.c(46): error:  #20: identifier "cache_size" is undefined
+src\GLCD_Scroll.c(50): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(50): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(61): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(62): error:  #20: identifier "chache" is undefined
+src\GLCD_Scroll.c(62): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(73): error:  #20: identifier "last_col_cahche" is undefined
+src\GLCD_Scroll.c(76): error:  #20: identifier "cache_size" is undefined
+src\GLCD_Scroll.c(79): error:  #20: identifier "cache_start" is undefined
+src\GLCD_Scroll.c(83): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(84): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(96): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(99): error:  #20: identifier "chache" is undefined
+src\GLCD_Scroll.c(128): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(128): error:  #20: identifier "cache_start" is undefined
+src\GLCD_Scroll.c(131): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(143): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(145): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(156): error:  #20: identifier "window_start" is undefined
+src\GLCD_Scroll.c(156): error:  #20: identifier "cache_start" is undefined
+src\GLCD_Scroll.c(159): error:  #20: identifier "cache_size" is undefined
+src\GLCD_Scroll.c(160): error:  #20: identifier "window_size" is undefined
+src\GLCD_Scroll.c(171): error:  #20: identifier "cache_size" is undefined
+compiling GLCD_SPI_LPC1700.c...
+src\GLCD.h(55): error:  #130: expected a "{"
+src\Font_6x8_h.h(19): warning:  #12-D: parsing restarts here after previous syntax error
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(246): error:  #29: expected an expression
+src\Font_6x8_h.h(21): warning:  #174-D: expression has no effect
+src\Font_6x8_h.h(246): error:  #65: expected a ";"
+src\GLCD_SPI_LPC1700.c(769): error:  #20: identifier "Font_6x8_h" is undefined
+src\GLCD_SPI_LPC1700.c(880): error:  #247: function "GLCD_Bitmap_Yfliped" has already been defined
+compiling GLCDRenderLIB.c...
+src\glcd.h(55): error:  #130: expected a "{"
+src\GLCDRenderLIB.c(26): warning:  #12-D: parsing restarts here after previous syntax error
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(26): warning:  #174-D: expression has no effect
+src\GLCDRenderLIB.c(45): error:  #65: expected a ";"
+src\GLCDRenderLIB.c(142): error:  #20: identifier "bitmap_player" is undefined
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12096 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12180 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Dungeon.axf: Error: L6218E: Undefined symbol GLCD_Bitmap_ROTL (referred from glcdrenderlib.o).
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling timer.c...
+compiling uart.c...
+compiling Controller.c...
+src\Controller.c(107): warning:  #61-D: integer operation result is out of range
+src\Controller.c(107): warning:  #68-D: integer conversion resulted in a change of sign
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Dungeon.axf: Error: L6218E: Undefined symbol GLCD_Bitmap_ROTL (referred from glcdrenderlib.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Dungeon.axf: Error: L6218E: Undefined symbol GLCD_Bitmap_ROTL (referred from glcdrenderlib.o).
+Target not created
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling timer.c...
+compiling uart.c...
+compiling Controller.c...
+src\Controller.c(107): warning:  #61-D: integer operation result is out of range
+src\Controller.c(107): warning:  #68-D: integer conversion resulted in a change of sign
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling main.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling timer.c...
+compiling uart.c...
+compiling Controller.c...
+src\Controller.c(107): warning:  #61-D: integer operation result is out of range
+src\Controller.c(107): warning:  #68-D: integer conversion resulted in a change of sign
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12268 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12264 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12264 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12264 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12264 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12260 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12344 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12344 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12344 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12348 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Dungeon.axf: Error: L6218E: Undefined symbol GLCD_Bitmap_ROTL (referred from glcdrenderlib.o).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(142): warning:  #223-D: function "GLCD_Bitmap_ROTL" declared implicitly
+linking...
+Dungeon.axf: Error: L6218E: Undefined symbol GLCD_Bitmap_ROTL (referred from glcdrenderlib.o).
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12340 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+linking...
+Program Size: Code=12340 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling GLCDRenderLIB.c...
+src\GLCDRenderLIB.c(137): error:  #147-D: declaration is incompatible with "void draw_TEXEL(unsigned int, unsigned int, TEXEL_CONTENT_t)" (declared at line 7 of "src\GLCDRenderLIB.h")
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(115): error:  #165: too few arguments in function call
+compiling GLCDRenderLIB.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+src\main.c(159): error:  #20: identifier "unit16_t" is undefined
+Target not created
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12388 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12388 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling GLCD_SPI_LPC1700.c...
+linking...
+Program Size: Code=12392 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(210): error:  #18: expected a ")"
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12448 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12448 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12432 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(209): warning:  #186-D: pointless comparison of unsigned integer with zero
+src\main.c(211): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=12460 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(209): warning:  #186-D: pointless comparison of unsigned integer with zero
+src\main.c(211): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=12460 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(209): warning:  #186-D: pointless comparison of unsigned integer with zero
+src\main.c(211): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=12460 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 2 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12464 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+src\main.c(213): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=12500 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+src\main.c(213): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=12500 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 1 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12484 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12484 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12488 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12488 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12508 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12508 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+compiling main.c...
+src\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=12508 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=12516 RO-data=6556 RW-data=4152 ZI-data=13072  
+"Dungeon.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\2B\\MTE 241\\FinalProject\\Dungeon.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.

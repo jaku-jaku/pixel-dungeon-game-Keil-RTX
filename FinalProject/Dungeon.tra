@@ -1,0 +1,31 @@
+*** Creating Trace Output File 'Dungeon.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup_lpc17xx.o"'
+### List of Objects: adding '"system_lpc17xx.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"led.o"'
+### List of Objects: adding '"retarget.o"'
+### List of Objects: adding '"rtx_config.o"'
+### List of Objects: adding '"timer.o"'
+### List of Objects: adding '"uart.o"'
+### List of Objects: adding '"controller.o"'
+### List of Objects: adding '"glcd_scroll.o"'
+### List of Objects: adding '"glcd_spi_lpc1700.o"'
+### List of Objects: adding '"glcdrenderlib.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "main.o" "led.o" "retarget.o" "rtx_config.o" "timer.o" "uart.o" "controller.o" "glcd_scroll.o" "glcd_spi_lpc1700.o" "glcdrenderlib.o" 
+c:\Software\Keil\ARM\RV31\LIB\RTX_CM3.LIB --library_type=microlib --strict --scatter "Dungeon.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Dungeon.map" -o Dungeon.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Dungeon.axf'
+### ADS-LD Command File: 'Dungeon.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Dungeon.lnp', Handle=0x00000B28
+### Writing '.lnp' file
+### ADS-LD Command file 'Dungeon.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

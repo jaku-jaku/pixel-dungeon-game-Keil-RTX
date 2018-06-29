@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "main.o" "led.o" "retarget.o" "rtx_config.o" "timer.o" "uart.o" "controller.o" "glcd_scroll.o" "glcd_spi_lpc1700.o" "glcdrenderlib.o" 
+c:\Software\Keil\ARM\RV31\LIB\RTX_CM3.LIB --library_type=microlib --strict --scatter "Dungeon.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Dungeon.map" -o Dungeon.axf

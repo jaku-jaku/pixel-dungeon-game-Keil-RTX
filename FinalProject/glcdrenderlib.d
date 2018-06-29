@@ -1,0 +1,11 @@
+glcdrenderlib.o: src\GLCDRenderLIB.c
+glcdrenderlib.o: src\GLCDRenderLIB.h
+glcdrenderlib.o: c:\Software\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h
+glcdrenderlib.o: c:\Software\Keil\ARM\CMSIS\Include\core_cm3.h
+glcdrenderlib.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\stdint.h
+glcdrenderlib.o: c:\Software\Keil\ARM\CMSIS\Include\core_cmInstr.h
+glcdrenderlib.o: c:\Software\Keil\ARM\CMSIS\Include\core_cmFunc.h
+glcdrenderlib.o: c:\Software\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
+glcdrenderlib.o: c:\Software\Keil\ARM\ARMCC\bin\..\include\stdio.h
+glcdrenderlib.o: src\uart.h
+glcdrenderlib.o: src\glcd.h
