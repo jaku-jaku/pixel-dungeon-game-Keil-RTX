@@ -22,7 +22,7 @@ c:\Software\Keil\ARM\RV31\LIB\RTX_CM3.LIB --library_type=microlib --strict --sca
 ### ADS-LD Output File: 'Dungeon.axf'
 ### ADS-LD Command File: 'Dungeon.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'Dungeon.lnp', Handle=0x00000A98
+### Creating CmdFile 'Dungeon.lnp', Handle=0x00000660
 ### Writing '.lnp' file
 ### ADS-LD Command file 'Dungeon.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

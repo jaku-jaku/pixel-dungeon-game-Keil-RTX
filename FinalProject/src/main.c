@@ -17,6 +17,7 @@
 //#define MAP_TEXEL_H MAP_TEXEL_SIZE
 //#define MAP_TEXEL_W MAP_TEXEL_SIZE
 
+//TODO: increase property from 8 bit to 16 bit, use this to handle blinking effects and health
 
 //settings
 #define BULLET_SPEED 3 //per tick
@@ -27,6 +28,7 @@
 #define POTENTIO_SENSITIVITY 200 
 #define ENEMIES_MAX_QUANT 4
 #define ENEMY_MOVING_SPEED 1
+#define ENEMY_UPDATE_ITV 100
 
 typedef struct OBJ_U8{
 	uint8_t x;
@@ -145,15 +147,18 @@ void Reset_TEXEL_CONTENT_16(uint16_t x, uint16_t y, uint16_t type)
 
 TEXEL_CONTENT_t Get_Enemy_Orientation(uint8_t x, uint8_t y, uint16_t type)
 {
-	uint8_t i;
+	uint8_t i, cx, cy, cp;
 	for(i=0;i<ENEMIES_MAX_QUANT;i++)
 	{	
 		os_mut_wait (&mutex_Enemies, 0xffff);
-		if(Enemies[i].x == x && Enemies[i].y ==y && (Enemies[i].property&((1<<7|type<<1))))//check if valid & same type
-		{
-			return (Enemies[i].property & 3);//direction mask
-		}
+		cx = Enemies[i].x;
+		cy = Enemies[i].y;
+		cp = Enemies[i].property;
 		os_mut_release (&mutex_Enemies);
+		if(cx == x && cy ==y && (cp&((1<<7|type<<1))))//check if valid & same type
+		{
+			return (cp & 3);//direction mask
+		}
 	}
 	return 0;//default direction
 }
@@ -208,12 +213,12 @@ __task void Task_Render()
 							enemy_p = Get_Enemy_Orientation(i, j, TC_ZOMBIE);
 							draw_TEXEL(i, j, enemy_p, TC_ZOMBIE);
 						}
-						if(type&TC_GHOST)
+						else if(type&TC_GHOST)
 						{
 							enemy_p = Get_Enemy_Orientation(i, j, TC_GHOST);
-							draw_TEXEL(i, j, enemy_p, TC_GHOST);
+							draw_TEXEL(i, j, 0, TC_GHOST);
 						}
-						if(type&TC_RAT)
+						else if(type&TC_RAT)
 						{
 							enemy_p = Get_Enemy_Orientation(i, j, TC_RAT);
 							draw_TEXEL(i, j, enemy_p, TC_RAT);
@@ -445,94 +450,97 @@ __task void Task_TrapUpdate()
 
 __task void Task_EnemyUpdate()
 {
+	os_itv_set (ENEMY_UPDATE_ITV);
 	for(;;)
-	{
-	
-		
-/* NOT WORKING
-		
-			uint8_t i, ex, ey, ep, valid, type;
-		uint16_t texel_type;
-		LED_display(222);
-
+	{	
+		uint8_t i, ex, ey, ep, valid, enemy_type, hitByBullet;
+		uint16_t map_texel_type;
+		os_itv_wait ();
 		for(i = 0; i< ENEMIES_MAX_QUANT; i++)
 		{
+			//read current position
 			os_mut_wait (&mutex_Enemies, 0xffff);
 			ex = Enemies[i].x;
 			ey = Enemies[i].y;
 			ep = Enemies[i].property;
 			os_mut_release (&mutex_Enemies);
 			
-			//if(1)//if exist
+			if(ep != 0)//if exist
 			{
 				valid = 1;//0 update nothing, 1 update position, 2 update property, 3 update all
-				//update position !!
+				hitByBullet = (Get_TEXEL_CONTENT(ex, ey)&TC_14_15_SPECIAL)>>14;
 				
-					switch(ep&3)//filter first 2 bits to find correct orientation
-					{
-						case 0: 
-							ex += ENEMY_MOVING_SPEED;
-							break;
-						case 1:
-							ey += ENEMY_MOVING_SPEED;
-							break;
-						case 2:
-							ex -= ENEMY_MOVING_SPEED;
-							break;
-						case 3:
-							ey -= ENEMY_MOVING_SPEED;
-							break;
-					}
-
-				//position check:
-					texel_type = Get_TEXEL_CONTENT(ex, ey);
-					type = ((ep>>3)&7)<<2;//filter enemy types & reposition to match texel_content format
-					switch(TC_ZOMBIE)
-					{
-						case TC_ZOMBIE: 
-							
-								//if(texel_type&TC_WALL)//wall: zombie will rotate 
-								{
-									ep = ((ep&3+1)%4)|(ep&(~3));//CW rotation
-									valid = 2;
-								}
-								break;
-							
-						case TC_GHOST:
+				//update position !!
+				switch(ep&3)//filter first 2 bits to find correct orientation
+				{
+					case 0: 
+						ex += ENEMY_MOVING_SPEED;
+						break;
+					case 1:
+						ey += ENEMY_MOVING_SPEED;
+						break;
+					case 2:
+						ex -= ENEMY_MOVING_SPEED;
+						break;
+					case 3:
+						ey -= ENEMY_MOVING_SPEED;
+						break;
+				}
+				
+				//type filter & position check & apply game mechanism:
+				map_texel_type = Get_TEXEL_CONTENT(ex, ey);
+				enemy_type = ((ep>>3)&7)<<2;//filter enemy types & reposition to match texel_content format
+				
+				switch(enemy_type)
+				{
+					case TC_ZOMBIE: 
+							if(map_texel_type&TC_WALL)//wall: zombie will rotate 
 							{
-								if(texel_type&TC_WALL)
-								{
-									
-								}
-								break;
+								ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
+								valid = 2;
 							}
-						case TC_RAT:
+							break;
+						
+					case TC_GHOST:
+						{
+							if(map_texel_type&TC_WALL)//wall: zombie will rotate 
 							{
-								if(texel_type&TC_WALL)
-								{
-								}
-								break;
+								ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
+								valid = 2;
 							}
-					}
-
-					//update data
-					os_mut_wait (&mutex_Enemies, 0xffff);
-	//				if(valid==1||valid==3)
-					{
-						Reset_TEXEL_CONTENT(Enemies[i].x, Enemies[i].y, type);
-						Enemies[i].x = 0;
-						Enemies[i].y = 0;
-						Set_TEXEL_CONTENT(0, 0, type);
-					}
-//					if(valid==2||valid==3)
-//					{
-//						Enemies[i].property = ep;//apply
-//					}
-					os_mut_release (&mutex_Enemies);
-					
+							break;
+						}
+					case TC_RAT:
+						{
+							if(map_texel_type&TC_WALL)//wall: zombie will rotate 
+							{
+								ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
+								valid = 2;
+							}
+							break;
+						}
+				}
+				if(hitByBullet!=0)
+				{
+					valid = 4;
+				}
+				//update data
+				os_mut_wait (&mutex_Enemies, 0xffff);
+				if(valid==1||valid==3)
+				{
+					Reset_TEXEL_CONTENT(Enemies[i].x, Enemies[i].y, enemy_type);
+					Enemies[i].x = ex;
+					Enemies[i].y = ey;
+					Set_TEXEL_CONTENT(ex, ey, enemy_type);
+				}
+				if(valid==2||valid==3)
+				{
+					Enemies[i].property = ep;//apply
+				}
+				os_mut_release (&mutex_Enemies);
+				
 			}
 		}
-		*/
 		
 		os_tsk_pass();
 	}
@@ -547,12 +555,13 @@ void start_tasks()
 	os_mut_init (&mutex_bullets);
 	os_mut_init (&mutex_Enemies);
 	//
-	//os_tsk_create(Task_MenuUpdate, 1);
+	//
+	os_tsk_create(Task_MenuUpdate, 1);
 	os_tsk_create(Task_Render, 1);
 	os_tsk_create(Task_InputHandler, 1);
 	os_tsk_create(Task_CharMapUpdate,1);
 	os_tsk_create(Task_ProjectilesUpdate, 1);
-	//os_tsk_create(Task_TrapUpdate, 1);
+	os_tsk_create(Task_TrapUpdate, 1);
 	os_tsk_create(Task_EnemyUpdate, 1);
 	os_tsk_delete_self();
 }
@@ -560,6 +569,7 @@ void start_tasks()
 void init()
 {
 	uint8_t i, j, isPath, random, counter_enemies = 0;
+	
 	LED_setup();
 	initJoystick();
 	initPotentiometer();
