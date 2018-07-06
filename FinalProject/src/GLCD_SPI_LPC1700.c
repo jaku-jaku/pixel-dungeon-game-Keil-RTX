@@ -751,6 +751,32 @@ void GLCD_DrawChar (unsigned int x, unsigned int y, unsigned int cw, unsigned in
   wr_dat_stop();
 }
 
+void GLCD_DrawChar_V (unsigned int x, unsigned int y, unsigned int cw, unsigned int ch, unsigned char *c) {
+  unsigned int i, j, k, pixs;
+  unsigned char *temp_c = c;
+  GLCD_SetWindow(x, y, ch, cw);
+
+  wr_cmd(0x22);
+  wr_dat_start();
+
+  k  = (cw + 7)/8;
+
+  if (k == 2) {
+  	
+	for (i = 0; i < cw; i++) {
+		temp_c = c + ch*2;
+	    for (j = 0; j < ch; j++) {
+	      pixs = *(unsigned short *)temp_c;
+	      temp_c -= 2;
+	      
+	      wr_dat_only (Color[(pixs >> i) & 1]);
+	    }
+    }
+  }
+  wr_dat_stop();
+}
+
+
 
 /*******************************************************************************
 * Disply character on given line                                               *
@@ -770,7 +796,9 @@ void GLCD_DisplayChar (unsigned int ln, unsigned int col, unsigned char fi, unsi
       break;
     case 1:  /* Font 16 x 24 */
       GLCD_DrawChar(col * 16, ln * 24, 16, 24, (unsigned char *)&Font_16x24_h[c * 24]);
-      break;
+    case 3:
+      GLCD_DrawChar_V(col * 24, ln * 16, 16, 24, (unsigned char *)&Font_16x24_h[c * 24]);
+    break;
   }
 }
 
@@ -787,7 +815,21 @@ void GLCD_DisplayChar (unsigned int ln, unsigned int col, unsigned char fi, unsi
 void GLCD_DisplayString (unsigned int ln, unsigned int col, unsigned char fi, unsigned char *s) {
 
   while (*s) {
-    GLCD_DisplayChar(ln, col++, fi, *s++);
+  	if(fi != 3)
+   		GLCD_DisplayChar(ln, col++, fi, *s++);
+   	else
+   		GLCD_DisplayChar(ln++, col, fi, *s++);
+  }
+}
+
+void GLCD_DisplayString_V (unsigned int x, unsigned int y, unsigned int vtrim, unsigned char *s) {
+  unsigned int cnter = 0;
+  unsigned char c;
+  while (*s) {
+  	c = *s++;
+  	c -= 32;
+   	GLCD_DrawChar_V(y, x + cnter * 16, 16, 24-vtrim, (unsigned char *)&Font_16x24_h[c * 24]);
+  	cnter ++;
   }
 }
 
@@ -847,7 +889,6 @@ void GLCD_Bargraph (unsigned int x, unsigned int y, unsigned int w, unsigned int
   }
   wr_dat_stop();
 }
-
 
 /*******************************************************************************
 * Display graphical bitmap image at position x horizontally and y vertically   *

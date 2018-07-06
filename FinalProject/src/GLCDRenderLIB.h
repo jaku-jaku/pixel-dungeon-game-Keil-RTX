@@ -23,7 +23,17 @@ typedef enum TEXEL_CONTENT {
 							TC_TRAP_NEEDLE_STATUS = 1<<10,
 							TC_TRAP_FIRE_LASER_EXIST =1<<11,
 							TC_TRAP_FIRE_LASER =1<<12, //1 fire, 0 laser
-							TC_TRAP_FIRE_LASER_STATUS = 1<<13,
+							TC_TRAP_FIRE_LASER_STATUS = 1<<13,//1 on, 1 off
+							
+							//detailed types:
+							TC_TRAP_NEEDLE_OFF =1<<9,
+							TC_TRAP_NEEDLE_ON  =3<<9,
+							TC_TRAP_FIRE_OFF = 		(1<<10) + (1<<11) + (0<<12) + 1,//110 + wall 
+							TC_TRAP_FIRE_ON  = 		(1<<10) + (1<<11) + (1<<12) + 1,//111 + wall 
+							TC_TRAP_FIRE_ON_PATH = 	(1<<10) + (1<<11) + (1<<12) + 0,//111 + path
+							TC_TRAP_LASER_OFF = 	(1<<10) + (0<<11) + (0<<12) + 1,//100 + wall
+							TC_TRAP_LASER_ON  = 	(1<<10) + (0<<11) + (1<<12) + 1,//101 + wall 
+							TC_TRAP_LASER_ON_PATH = (1<<10) + (0<<11) + (1<<12) + 0,//101 + path
 							
 							//BIT 14, 15:
 							// if exist fire/laser trap: orientation of laser

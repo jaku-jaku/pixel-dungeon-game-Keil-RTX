@@ -48,6 +48,7 @@ extern void GLCD_Clear          (unsigned short color);
 extern void GLCD_DrawChar       (unsigned int x,  unsigned int y, unsigned int cw, unsigned int ch, unsigned char *c);
 extern void GLCD_DisplayChar    (unsigned int ln, unsigned int col, unsigned char fi, unsigned char  c);
 extern void GLCD_DisplayString  (unsigned int ln, unsigned int col, unsigned char fi, unsigned char *s);
+extern void GLCD_DisplayString_V (unsigned int x, unsigned int y, unsigned int vtrim, unsigned char *s) ;
 extern void GLCD_ClearLn        (unsigned int ln, unsigned char fi);
 extern void GLCD_Bargraph       (unsigned int x,  unsigned int y, unsigned int w, unsigned int h, unsigned int val);
 extern void GLCD_Bitmap         (unsigned int x,  unsigned int y, unsigned int w, unsigned int h, unsigned char *bitmap);
