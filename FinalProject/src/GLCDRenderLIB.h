@@ -16,8 +16,8 @@ typedef enum TEXEL_CONTENT {
 							
 							TC_POTION		=1<<5, 
 							TC_TIME_CAP		=1<<6,
-							TC_BULLET_CLIP	=1<<7,
-							TC_PORTAL 		=1<<8,
+							TC_PORTAL 		=1<<7,
+							TC_BULLET_CLIP	=1<<8,
 							
 							TC_TRAP_NEEDLE =1<<9,
 							TC_TRAP_NEEDLE_STATUS = 1<<10,

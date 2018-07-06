@@ -890,6 +890,56 @@ void GLCD_Bargraph (unsigned int x, unsigned int y, unsigned int w, unsigned int
   wr_dat_stop();
 }
 
+void GLCD_Ptergraph (unsigned int x, unsigned int y, unsigned int r, int dx, int dy, unsigned int dir) {
+  int i,j,nx,ny, signx=0, signy=0;
+
+  GLCD_SetWindow(x, y, r*2, r*2);
+  wr_cmd(0x22);
+  wr_dat_start();
+  for (i = 0; i < r*2; i++) {
+  	nx =(i-r);
+  	nx = nx*dy/dx + r;
+  	if(dir)
+	{
+	  	signx = i-r;
+	  	signx*=dx;
+	}
+    for (j = 0; j < r*2; j++) {
+    	if(dir)
+      	  {
+			signy = j - r;
+      	  	signy*=dy;
+      	  }
+    	if((((i-r<4) || (r-i<4))&&(((j-r<4) || (r-j<4))))||((i==0)||(i==(r*2-1))||(j==0)||(j==(r*2-1))))//Centre + Bounding box
+      	{
+			wr_dat_only(Color[TXT_COLOR]);
+		}
+      	else if(dx == 0)//deno = 0 case
+      	{
+		  if(((i-r<2) || (r-i<2))&& dy != 0 && signy>=0)
+		  {
+		  	 wr_dat_only(Color[TXT_COLOR]);
+		  }else{
+		  	wr_dat_only(Color[BG_COLOR]);
+		  }
+      	}
+      	else
+      	{
+      	  ny = j - nx;
+      	  if((ny<3)&&(ny>-3) && signx>=0 && signy >=0)
+      	  {
+			wr_dat_only(Color[TXT_COLOR]);
+		  }else
+		  {
+		  	wr_dat_only(Color[BG_COLOR]);
+		  }
+      	}
+
+    }
+  }
+  wr_dat_stop();
+}
+
 /*******************************************************************************
 * Display graphical bitmap image at position x horizontally and y vertically   *
 * (This function is optimized for 16 bits per pixel format, it has to be       *

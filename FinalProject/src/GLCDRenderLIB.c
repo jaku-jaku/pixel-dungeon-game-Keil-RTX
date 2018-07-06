@@ -326,48 +326,68 @@ unsigned short bitmap_portal[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
 //								 B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B}; //fire on 1
 								 								 
 								 
-unsigned short bitmap_spike_off[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //spikes off
+//unsigned short bitmap_spike_off[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,W,W,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //spikes off
 
 
-unsigned short bitmap_spike_on[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //spikes on
+//unsigned short bitmap_spike_on[] = { W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,B,B,B,B,B,B,W,W,W,W,B,B,B,B,B,B,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
+//									 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //spikes on
 
-
+unsigned short bitmap_wall[] ={B,B,D,D,D,I,I,I,I,D,B,D,I,I,I,I,D,D,B,B,
+							 B,B,B,D,D,I,I,D,D,D,B,D,I,I,I,D,D,D,B,B,
+							 D,B,B,B,D,D,D,D,D,D,B,D,D,I,D,D,D,B,B,D,
+							 D,D,D,B,B,D,D,D,D,B,B,D,D,D,D,B,B,B,B,D,
+							 D,D,D,B,B,B,B,B,B,B,B,D,D,D,D,B,B,D,D,D,
+							 I,I,D,D,B,B,D,D,D,B,B,B,B,B,B,D,D,D,D,I,
+							 I,D,D,D,B,D,D,D,D,D,D,D,D,D,B,D,D,D,I,I,
+							 D,D,B,B,B,D,D,I,D,D,D,D,D,D,B,B,D,D,I,I,
+							 D,B,B,B,B,D,D,I,I,I,I,D,D,B,B,B,B,D,D,D,
+							 B,B,D,D,B,D,D,I,I,I,I,I,D,D,B,B,B,B,B,B,
+							 I,I,D,D,B,D,D,I,I,I,I,D,D,D,B,B,D,D,D,D,
+							 I,I,D,D,B,D,D,D,D,I,I,D,D,D,B,B,D,D,I,I,
+							 I,D,D,D,D,B,B,D,D,D,D,D,D,B,B,B,D,D,I,I,
+							 D,D,D,D,D,B,B,B,D,D,D,D,B,B,B,B,D,D,I,I,
+							 D,D,B,B,B,B,B,B,B,B,B,B,B,B,B,B,D,D,D,I,
+							 D,B,B,B,B,D,D,D,D,B,D,D,D,D,D,B,B,D,D,D,
+							 D,B,B,B,D,D,D,D,D,B,D,D,D,D,D,B,B,B,D,D,
+							 D,B,B,D,D,D,I,I,D,B,B,D,D,D,D,D,B,B,B,D,
+							 B,B,B,D,D,I,I,I,D,B,B,D,I,I,D,D,B,B,B,B,};//wall
+											
 
 
 
@@ -375,8 +395,12 @@ unsigned short bitmap_spike_on[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
 void draw_TEXEL(unsigned int x_, unsigned int y_, unsigned int dir_, TEXEL_CONTENT_t type_)
 {
 	unsigned short* bitmap;
+	uint8_t customDraw = 0;
 	switch(type_)
 	{
+		case TC_WALL:
+			bitmap = bitmap_wall;
+			break;
 		case TC_PLAYER:
 			bitmap = bitmap_player;
 			break;
@@ -402,10 +426,18 @@ void draw_TEXEL(unsigned int x_, unsigned int y_, unsigned int dir_, TEXEL_CONTE
 			bitmap = bitmap_portal;
 			break;
 		case TC_TRAP_NEEDLE_OFF:
-			bitmap = bitmap_spike_off;
+			GLCD_Bargraph(x_+2, y_+2, 5, 5, 0);
+			GLCD_Bargraph(x_+12, y_+2, 5, 5, 0);
+			GLCD_Bargraph(x_+2, y_+12, 5, 5, 0);
+			GLCD_Bargraph(x_+12, y_+12, 5, 5, 0);
+			customDraw = 1;
 			break;
 		case TC_TRAP_NEEDLE_ON:
-			bitmap = bitmap_spike_on;
+			GLCD_Bargraph(x_+2, y_+2, 5, 5, 1024);
+			GLCD_Bargraph(x_+12, y_+2, 5, 5, 1024);
+			GLCD_Bargraph(x_+2, y_+12, 5, 5, 1024);
+			GLCD_Bargraph(x_+12, y_+12, 5, 5, 1024);
+			customDraw = 1;
 			break;
 //		case TC_TRAP_FIRE_OFF:
 //			bitmap = bitmap_fire_off;
@@ -426,6 +458,7 @@ void draw_TEXEL(unsigned int x_, unsigned int y_, unsigned int dir_, TEXEL_CONTE
 //			bitmap = bitmap_laser_beam;
 //			break;
 	}
-	GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap);
+	if(!customDraw)
+		GLCD_Bitmap_ROT (x_*MAP_TEXEL_W, y_*MAP_TEXEL_H, MAP_TEXEL_W, MAP_TEXEL_H, dir_, (unsigned char*)bitmap);
 }
 								 

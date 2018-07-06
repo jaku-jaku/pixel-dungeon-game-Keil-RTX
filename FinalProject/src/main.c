@@ -21,7 +21,7 @@
 //TODO: increase property from 8 bit to 16 bit, use this to handle blinking effects and health
 
 //settings
-#define BULLET_SPEED 5 //per tick
+#define BULLET_SPEED 10 //per tick
 #define BULLET_MAX_QUANT 8
 #define BULLET_DEFUALT_QUANT 5
 #define BULLET_W 5
@@ -29,13 +29,19 @@
 #define POTENTIO_SENSITIVITY 200 
 #define ENEMIES_MAX_QUANT 4
 #define ENEMY_MOVING_SPEED 1
-#define ENEMY_UPDATE_ITV 100
+#define ENEMY_UPDATE_ITV 50
 #define HIRO_MAX_HEALTH 3
 #define INPUT_UPDATE_PERIOD 20
-
+#define HIRO_PROPERTY_WIN (1<<6)
 #define HIRO_PROPERTY_INVINCIBLE (1<<4)
-#define INVINCIBLE_DURATION 5000 //ms
+#define INVINCIBLE_DURATION 2000 //ms
 #define TIME_TICK_SCALE 1000
+
+#define REWARDS_MAX_QUANT 3
+#define TRAPS_MAX_QUANT 1
+#define TIME_TICK_TRAP_SCALE 100 
+#define TRAP_SPIKE_DURATION 10 //*0.1s
+
 typedef struct OBJ_U8{
 	uint8_t x;
 	uint8_t y;
@@ -53,7 +59,9 @@ typedef struct OBJ_U16{
 ObjectU8_t Hiro;
 ObjectU16_t Bullets[BULLET_MAX_QUANT];//NOTE: bullet in world coord
 ObjectU8_t Enemies[ENEMIES_MAX_QUANT];
-uint8_t Bullet_quant = BULLET_DEFUALT_QUANT; 
+ObjectU8_t Portals[REWARDS_MAX_QUANT];
+ObjectU8_t Traps[TRAPS_MAX_QUANT];
+static uint8_t Bullet_quant = BULLET_DEFUALT_QUANT; 
 OS_MUT mutex_Hiro;
 OS_MUT mutex_Enemies;
 OS_MUT mutex_map_TEXEL;
@@ -61,8 +69,11 @@ OS_MUT mutex_bullets;
 OS_MUT mutex_m_START_END;
 OS_MUT mutex_input;
 OS_MUT mutex_GMstatus;
+OS_MUT mutex_Portals;
+OS_MUT mutex_Traps;
 //OS_MUT mutex_zombies;
 const uint8_t Temp_enemy_pos[8] = {1,8,7,3,8,1,13,10};
+const uint16_t Temp_rewards_pos[9] = {7,3, TC_PORTAL,8,1, TC_PORTAL, 1,8, TC_POTION};
 const uint8_t m_START_END[4] = {1,1,13,11};
 const uint16_t MAP[MAP_SCRN_H] = {32767, 16385, 24053, 21781, 21845, 21829, 22397, 20485, 22397, 21825, 24029, 16385};
 uint16_t map_TEXEL[MAP_TEXEL_AREA] = {0};
@@ -72,8 +83,10 @@ uint32_t m_Hiro_LastDMGTime = 0;
 uint32_t m_GAME_startTime = 0;
 uint16_t m_GAME_ACCTime = 0;
 enum {GM_MENU, GM_RUNNING, GM_PAUSE, GM_END_S, GM_END_F};
-uint8_t m_GAME_STATUS = GM_MENU;
-uint8_t latchPB = 0, screenClear = 0;
+uint8_t m_GAME_STATUS = GM_RUNNING;
+uint8_t screenClear = 0;
+uint8_t Portal_InUse = 0;
+	uint16_t prev_time_needle = 0;
 
 uint8_t GetCurrentGameSTATUS()
 {
@@ -86,26 +99,23 @@ uint8_t GetCurrentGameSTATUS()
 
 __task void Task_MenuUpdate()
 {
+	os_itv_set (50);
 	for(;;)
 	{
-		uint8_t PB = 0, GM_state;
+		uint8_t PB = 0, GM_state, cp;
 		unsigned char *s = (unsigned char*)malloc(8 * sizeof(unsigned char));
+		os_itv_wait();			
+		os_mut_wait (&mutex_Hiro, 0xffff);
+		cp = Hiro.property;
+		os_mut_release (&mutex_Hiro);
 		//update pushbutton
 		PB = readPushBtn();
-		
-		if(PB && !latchPB)//latch
-		{
-			latchPB = 1;
-		}else if(!PB && latchPB)
-		{
-			latchPB = 0;
-		}
 
 		GM_state = GetCurrentGameSTATUS();
 		//compute game status
 		if(GM_state == GM_MENU)
 		{
-			if(latchPB)
+			if(PB)
 			{
 				os_mut_wait (&mutex_map_TEXEL, 0xffff);
 				m_GAME_STATUS = GM_RUNNING;
@@ -115,7 +125,7 @@ __task void Task_MenuUpdate()
 			}
 		}else if(GM_state == GM_PAUSE)
 		{
-			if(latchPB)
+			if(PB)
 			{
 				os_mut_wait (&mutex_map_TEXEL, 0xffff);
 				m_GAME_STATUS = GM_RUNNING;
@@ -127,13 +137,27 @@ __task void Task_MenuUpdate()
 			
 		}else if(GM_state == GM_END_F)
 		{
-			
-		}else
+
+		}else//running
 		{
-			if(latchPB)
+			if(PB)
 			{
 				os_mut_wait (&mutex_map_TEXEL, 0xffff);
 				m_GAME_STATUS = GM_PAUSE;
+				os_mut_release (&mutex_map_TEXEL);
+			}
+			
+			if(((cp>>2)&3) == 0)
+			{
+				os_mut_wait (&mutex_map_TEXEL, 0xffff);
+				m_GAME_STATUS = GM_END_F;//Mission Failed
+				os_mut_release (&mutex_map_TEXEL);
+			}
+			
+			if(cp & HIRO_PROPERTY_WIN)
+			{
+				os_mut_wait (&mutex_map_TEXEL, 0xffff);
+				m_GAME_STATUS = GM_END_S;
 				os_mut_release (&mutex_map_TEXEL);
 			}
 		}
@@ -287,7 +311,7 @@ __task void Task_Render()
 		unsigned char *s = (unsigned char*)malloc(8 * sizeof(unsigned char));
 		uint8_t i, j, cp, enemy_p;
 		uint16_t cx, cy, type;
-
+		
 		i = GetCurrentGameSTATUS();
 		if(i!= screenClear)
 		{
@@ -297,11 +321,22 @@ __task void Task_Render()
 		if(i == GM_RUNNING)
 		{
 				//GLCD_Clear(Blue);
-				GLCD_SetTextColor(Black);//wall
-				GLCD_SetBackColor(White);//path
 				os_mut_wait (&mutex_Hiro, 0xffff);
+				cx = Hiro.x;
+				cy = Hiro.y;
 				cp = Hiro.property;
 				os_mut_release (&mutex_Hiro);
+				
+				//m_START_END
+			os_mut_wait (&mutex_m_START_END, 0xffff);
+				i = m_START_END[2];
+				j = m_START_END[3];
+			os_mut_release (&mutex_m_START_END);
+				GLCD_SetTextColor(Purple);
+				GLCD_Ptergraph(300,220,10,j- cy,i-cx,1);
+			
+				GLCD_SetTextColor(Black);//wall
+				GLCD_SetBackColor(White);//path
 				for(i =0; i<(MAP_SCRN_W - 1); i++)
 				{
 					for(j = 0; j<MAP_SCRN_H; j++)
@@ -310,7 +345,8 @@ __task void Task_Render()
 						enemy_p = (((type&TC_ZOMBIE)|(type&TC_GHOST))|type&TC_RAT);//if enemyy exist
 						if(type&TC_WALL)//WALL
 						{
-							clearTEXEL(i, j, 1024);
+							draw_TEXEL(i, j, 0, TC_WALL);
+							//clearTEXEL(i, j, 1024);
 						}
 						else if(type&TC_PLAYER)//PLAYER
 						{
@@ -326,7 +362,7 @@ __task void Task_Render()
 							clearTEXEL(i,j, 0);
 						}
 						
-						if((enemy_p)&&!(type&TC_PLAYER))
+						if((enemy_p)&&!(type&TC_PLAYER))//ENEMIES
 						{
 								if(type&TC_ZOMBIE)
 								{
@@ -342,13 +378,37 @@ __task void Task_Render()
 									enemy_p = Get_Enemy_Property(i, j, TC_RAT);
 									draw_TEXEL(i, j, (enemy_p&3), TC_RAT);
 								}
+						}else if(!(type&TC_PLAYER))
+						{
+								if(type&TC_POTION)
+								{
+									draw_TEXEL(i, j, 0, TC_POTION);
+								}
+								else if(type&TC_PORTAL)
+								{
+									draw_TEXEL(i, j, 0, TC_PORTAL);
+								}
+								else if(type&TC_TRAP_NEEDLE)
+								{
+									GLCD_SetTextColor(Red);//on
+									GLCD_SetBackColor(LightGrey);//off
+									if(type & TC_TRAP_NEEDLE_STATUS)
+									{
+										draw_TEXEL(i*MAP_TEXEL_W, j*MAP_TEXEL_W, 0, TC_TRAP_NEEDLE_ON);
+									}else
+									{
+										draw_TEXEL(i*MAP_TEXEL_W, j*MAP_TEXEL_W, 0, TC_TRAP_NEEDLE_OFF);
+									}
+									GLCD_SetTextColor(Black);//wall
+									GLCD_SetBackColor(White);//path
+								}
 						}
 					}
 				}
 				
 				//draw Healthbar
 				GLCD_SetTextColor(Red);//health bar
-				GLCD_SetBackColor(Olive);//backgrnd
+				GLCD_SetBackColor(DarkGrey);//backgrnd
 				for(i = 0; i< HIRO_MAX_HEALTH; i++)
 				{
 					GLCD_Bargraph(305, 10 + i*25, 10, 20, (i<((cp>>2)&3))?1024:0);//toggle health
@@ -378,42 +438,90 @@ __task void Task_Render()
 				{
 					LED_set(BULLET_MAX_QUANT - i - 1);
 				}
-				for(; j< BULLET_MAX_QUANT; j++)
+				for(j; j< BULLET_MAX_QUANT; j++)
 				{
-					LED_clear(BULLET_MAX_QUANT- j -1);
+					LED_clear(BULLET_MAX_QUANT - j -1);
 				}
 				
 				//display timer 
 				m_GAME_ACCTime = (timer_read()/TIME_TICK_SCALE/1000-m_GAME_startTime);
-				GLCD_SetTextColor(Black);
+				GLCD_SetTextColor(Maroon);
 				GLCD_SetBackColor(White);
 				sprintf(s, "%02d:%02d", (m_GAME_ACCTime/60)%60, m_GAME_ACCTime%60);
-				GLCD_DisplayString_V(90, 300, 6, s);
+				GLCD_DisplayString_V(110, 300, 6, s);
+			
 		}
+		/*MENUs*/
 		else if(i == GM_MENU)
 		{
+			GLCD_SetTextColor(Black);
 				sprintf(s, "ESCAPE");
 				GLCD_DisplayString_V(30, 270, 6, s);
 				sprintf(s, "THE");
 				GLCD_DisplayString_V(30, 220, 6, s);
 				sprintf(s, "DUNGEON");
 				GLCD_DisplayString_V(30, 170, 6, s);
-				sprintf(s, "START");
-				GLCD_DisplayString_V(120, 50, 6, s);
-				GLCD_Bargraph(39, 110, 3, 100, 1024);
-				GLCD_Bargraph(140, 10, 190, 6, 1024);
-			
+				GLCD_Bargraph(140, 10, 190, 6, 1024);	
+			GLCD_SetTextColor(Cyan);
+			  sprintf(s, "______");
+				GLCD_DisplayString_V(145, 20, 6, s);
+			GLCD_SetTextColor(Black);
+				sprintf(s, "START>");
+				GLCD_DisplayString_V(145, 20, 6, s);
+				GLCD_Bargraph(10, 135, 3, 110, 1024);
+				GLCD_Bargraph(47, 135, 3, 110, 1024);					
+				GLCD_Bargraph(10, 135, 40, 3, 1024);
+
 		}
 		else if(i == GM_PAUSE)
 		{
+				GLCD_SetTextColor(Black);
 				sprintf(s, "PAUSE");
 				GLCD_DisplayString_V(30, 270, 6, s);
 				sprintf(s, "TIME: [%02d:%02d]", (m_GAME_ACCTime/60)%60, m_GAME_ACCTime%60);
 				GLCD_DisplayString_V(30, 170, 6, s);
-				sprintf(s, "CONTINUE");
-				GLCD_DisplayString_V(80, 50, 6, s);
-				GLCD_Bargraph(39, 50, 3, 180, 1024);
-				GLCD_Bargraph(140, 10, 190, 6, 1024);		
+				sprintf(s, "CONTI>");
+				GLCD_DisplayString_V(145, 20, 6, s);
+				sprintf(s, "REPLAY");
+				GLCD_DisplayString_V(5, 20, 6, s);
+				
+				GLCD_Bargraph(10, 135, 3, 110, 1024);
+				GLCD_Bargraph(47, 135, 3, 110, 1024);					
+				GLCD_Bargraph(10, 135, 40, 3, 1024);
+				GLCD_Bargraph(10, 0, 3, 110, 1024);
+				GLCD_Bargraph(47, 0, 3, 110, 1024);					
+				GLCD_Bargraph(10, 110, 40, 3, 1024);	
+				GLCD_Bargraph(140, 10, 190, 6, 1024);				
+		}else if(i == GM_END_F)
+		{
+				GLCD_SetTextColor(Black);
+				sprintf(s, "MISSION");
+				GLCD_DisplayString_V(30, 270, 6, s);
+				sprintf(s, "FAILED");
+				GLCD_DisplayString_V(130, 240, 6, s);
+				sprintf(s, "TIME: [%02d:%02d]", (m_GAME_ACCTime/60)%60, m_GAME_ACCTime%60);
+				GLCD_DisplayString_V(30, 170, 6, s);
+				sprintf(s, "REPLAY");
+				GLCD_DisplayString_V(5, 20, 6, s);
+				GLCD_Bargraph(10, 0, 3, 110, 1024);
+				GLCD_Bargraph(47, 0, 3, 110, 1024);					
+				GLCD_Bargraph(10, 110, 40, 3, 1024);
+				GLCD_Bargraph(140, 10, 190, 6, 1024);	
+		}else if(i == GM_END_S)
+		{
+				GLCD_SetTextColor(Black);
+				sprintf(s, "MISSION");
+				GLCD_DisplayString_V(30, 270, 6, s);
+				sprintf(s, "SUCCESS!");
+				GLCD_DisplayString_V(110, 240, 6, s);
+				sprintf(s, "TIME: [%02d:%02d]", (m_GAME_ACCTime/60)%60, m_GAME_ACCTime%60);
+				GLCD_DisplayString_V(30, 170, 6, s);
+				sprintf(s, "REPLAY");
+				GLCD_DisplayString_V(5, 20, 6, s);
+				GLCD_Bargraph(10, 0, 3, 110, 1024);
+				GLCD_Bargraph(47, 0, 3, 110, 1024);					
+				GLCD_Bargraph(10, 110, 40, 3, 1024);
+				GLCD_Bargraph(140, 10, 190, 6, 1024);	
 		}
 
 		free(s);
@@ -558,7 +666,7 @@ __task void Task_CharMapUpdate()
 				}
 				else
 				{
-					if(texel_content&(TC_ZOMBIE|TC_GHOST|TC_RAT))//collided with enemy, [-1 health]
+					if(texel_content&(TC_ZOMBIE|TC_GHOST|TC_RAT|TC_TRAP_NEEDLE_ON))//collided with enemy, [-1 health]
 					{
 							p = ((p>>2)&3)<=0?p:(p-(1<<2));// -1hp
 							p += HIRO_PROPERTY_INVINCIBLE;//apply invincibility
@@ -566,9 +674,57 @@ __task void Task_CharMapUpdate()
 					}
 				}
 				
+				//-----------Rewards
+				if(texel_content&TC_POTION)
+				{
+					p = (((p>>2)&3)<HIRO_MAX_HEALTH)?(p+(1<<2)):p;
+					Reset_TEXEL_CONTENT(x, y, TC_POTION);//delete the portion
+				}
+				else if((texel_content&TC_PORTAL))//Teleporting portal
+				{
+					os_mut_wait (&mutex_Portals, 0xffff);
+					if(Portals[0].x == x && !Portal_InUse)
+					{
+						Portal_InUse = 2;
+						os_mut_wait (&mutex_Hiro, 0xffff);
+						Reset_TEXEL_CONTENT(Hiro.x, Hiro.y, TC_PLAYER);
+						Hiro.x = Portals[1].x;
+						Hiro.y = Portals[1].y;
+						Set_TEXEL_CONTENT(Hiro.x, Hiro.y, TC_PLAYER);
+						os_mut_release (&mutex_Hiro);
+					}else if(!Portal_InUse)
+					{
+						Portal_InUse = 1;
+						os_mut_wait (&mutex_Hiro, 0xffff);
+						Reset_TEXEL_CONTENT(Hiro.x, Hiro.y, TC_PLAYER);
+						Hiro.x = Portals[0].x;
+						Hiro.y = Portals[0].y;
+						Set_TEXEL_CONTENT(Hiro.x, Hiro.y, TC_PLAYER);
+						os_mut_release (&mutex_Hiro);
+					}
+					os_mut_release (&mutex_Portals);
+					
+				}else
+				{
+					Portal_InUse = false;
+				}
+				
+				
+				//check the dist away from the end goal
+				os_mut_wait (&mutex_m_START_END, 0xffff);
+				x = m_START_END[2]-x;
+				y = m_START_END[3]-y;
+				os_mut_release (&mutex_m_START_END);
+				if((x+y)==0)
+				{
+					p += HIRO_PROPERTY_WIN;
+				}
+				
 				os_mut_wait (&mutex_Hiro, 0xffff);
 				Hiro.property = p;
 				os_mut_release (&mutex_Hiro);
+				
+				
 		}//END- GM_RUNNING
 			
 		//End of one cycle
@@ -624,8 +780,10 @@ __task void Task_ProjectilesUpdate()
 								j = 1;
 								j = Get_TEXEL_CONTENT_16(bx, by);
 								//collision check
-								if(j&TC_WALL)
+								if((j&TC_GHOST)|(j&TC_ZOMBIE)|(j&TC_RAT))
 								{
+										//Set_TEXEL_CONTENT_16(bx, by, TC_14_15_SPECIAL);
+										Kill_Enemies_U16(bx, by);
 										//return bullet
 										os_mut_wait (&mutex_bullets, 0xffff);
 										Bullets[i].property = 0;
@@ -634,10 +792,8 @@ __task void Task_ProjectilesUpdate()
 										Bullet_quant++;
 										os_mut_release (&mutex_bullets); 
 								}
-								if((j&TC_GHOST)|(j&TC_ZOMBIE)|(j&TC_RAT))
+								else if(j&TC_WALL)
 								{
-										//Set_TEXEL_CONTENT_16(bx, by, TC_14_15_SPECIAL);
-										Kill_Enemies_U16(bx, by);
 										//return bullet
 										os_mut_wait (&mutex_bullets, 0xffff);
 										Bullets[i].property = 0;
@@ -665,11 +821,51 @@ __task void Task_ProjectilesUpdate()
 /*=================================TRAP===================================*/
 __task void Task_TrapUpdate()
 {
+
 	for(;;)
 	{
+		uint8_t i, tx, ty, tp;
+		uint16_t cur_time;
+
+		for (i =0; i<TRAPS_MAX_QUANT; i++)
+		{
+			os_mut_wait (&mutex_Traps, 0xffff);
+			tx = Traps[i].x;
+			ty = Traps[i].y;
+			tp = Traps[i].property;
+			os_mut_release (&mutex_Traps);
+			
+			cur_time = timer_read()/TIME_TICK_SCALE/TIME_TICK_TRAP_SCALE;
+			
+			if((tp&1)&&(tp&(1<<7)))
+			{
+				if((cur_time - prev_time_needle) > TRAP_SPIKE_DURATION)
+				{
+					//toggle
+					if(tp&2)//if it was on
+					{
+						Reset_TEXEL_CONTENT(tx, ty, TC_TRAP_NEEDLE_STATUS);
+						tp -= 2;
+					}else
+					{
+						Set_TEXEL_CONTENT(tx, ty, TC_TRAP_NEEDLE_STATUS);
+						tp += 2;
+					}
+					prev_time_needle = cur_time;
+				}
+							
+				os_mut_wait (&mutex_Traps, 0xffff);
+				Traps[i].property = tp;
+				os_mut_release (&mutex_Traps);
+			}
+
+		}
+		
 		os_tsk_pass();
+	
 	}
 }
+
 
 
 /*=================================ENEMY===================================*/
@@ -717,11 +913,11 @@ __task void Task_EnemyUpdate()
 							//type filter & position check & apply game mechanism:
 							map_texel_type = Get_TEXEL_CONTENT(ex, ey);
 							enemy_type = ((ep>>4)&7)<<2;//filter enemy types & reposition to match texel_content format				
-
+							srand(timer_read());
 							switch(enemy_type)
 							{
 								case TC_ZOMBIE: 
-										if(map_texel_type&TC_WALL)//wall: zombie will rotate 
+										if((map_texel_type&TC_WALL)||(rand()%4==0))//wall: zombie will rotate 
 										{
 											ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
 											valid = 2;
@@ -730,16 +926,16 @@ __task void Task_EnemyUpdate()
 									
 								case TC_GHOST:
 									{
-										if(map_texel_type&TC_WALL)//wall: zombie will rotate 
+										if(map_texel_type&TC_WALL)//wall: ghost will rotate 
 										{
-											ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
+											ep = (((rand())%4)|(ep&(~3)));//CW rotation
 											valid = 2;
 										}
 										break;
 									}
 								case TC_RAT:
 									{
-										if(map_texel_type&TC_WALL)//wall: zombie will rotate 
+										if(map_texel_type&TC_WALL)//wall: rat will rotate 
 										{
 											ep = (((ep&3)+1)%4)|(ep&(~3));//CW rotation
 											valid = 2;
@@ -784,6 +980,9 @@ void start_tasks()
 	os_mut_init (&mutex_m_START_END);
 	os_mut_init (&mutex_input);
 	os_mut_init (&mutex_map_TEXEL);
+	os_mut_init (&mutex_Portals);
+	os_mut_init (&mutex_Traps);
+	
 	//
 	os_tsk_create(Task_MenuUpdate, 1);
 	os_tsk_create(Task_Render, 1);
@@ -837,6 +1036,23 @@ void init()
 			}
 		}
 	}
+	//assign rewards
+	for (i=0; i< REWARDS_MAX_QUANT; i++)
+	{
+		if(i<2)//portals
+		{
+				Portals[i].x = Temp_rewards_pos[i*3];
+				Portals[i].y = Temp_rewards_pos[i*3+1];
+				Portals[i].property = Temp_rewards_pos[i*3+2]>>5+1<<7;//save types + enable the reward
+		}
+		map_TEXEL[Temp_rewards_pos[i*3]+Temp_rewards_pos[i*3+1]*MAP_SCRN_W] |=  Temp_rewards_pos[i*3+2];
+	}
+	//assign traps
+	Traps[0].x = 11;
+	Traps[0].y = 11;
+	Traps[0].property = 1 + (1<<7);//needle traps + valid trap
+	map_TEXEL[Traps[0].x+Traps[0].y*MAP_SCRN_W] |= TC_TRAP_NEEDLE_OFF;
+	
 	GLCD_Clear(White);
 }
 
