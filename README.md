@@ -1,1 +1,2 @@
-# MTE241
+# Final project for MTE241
+Pixel Dungeon Game
