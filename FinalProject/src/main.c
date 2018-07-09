@@ -10,51 +10,12 @@
 #include "timer.h"
 #include "GLCDRenderLIB.h"
 #include <stdbool.h>
+#include "GameCommons.h"
+
 #define DEBUG_MSG(x) printf("%s", x)
 
-#define MAP_SCRN_W 16
-#define MAP_SCRN_H 12
-//#define MAP_TEXEL_SIZE 20
-//#define MAP_TEXEL_H MAP_TEXEL_SIZE
-//#define MAP_TEXEL_W MAP_TEXEL_SIZE
-
-//TODO: increase property from 8 bit to 16 bit, use this to handle blinking effects and health
-
-//settings
-#define BULLET_SPEED 10 //per tick
-#define BULLET_MAX_QUANT 8
-#define BULLET_DEFUALT_QUANT 5
-#define BULLET_W 5
-#define BULLET_H 5
-#define POTENTIO_SENSITIVITY 200 
-#define ENEMIES_MAX_QUANT 4
-#define ENEMY_MOVING_SPEED 1
-#define ENEMY_UPDATE_ITV 50
-#define HIRO_MAX_HEALTH 3
-#define INPUT_UPDATE_PERIOD 20
-#define HIRO_PROPERTY_WIN (1<<6)
-#define HIRO_PROPERTY_INVINCIBLE (1<<4)
-#define INVINCIBLE_DURATION 2000 //ms
-#define TIME_TICK_SCALE 1000
-
-#define REWARDS_MAX_QUANT 3
-#define TRAPS_MAX_QUANT 1
-#define TIME_TICK_TRAP_SCALE 100 
-#define TRAP_SPIKE_DURATION 10 //*0.1s
-
-typedef struct OBJ_U8{
-	uint8_t x;
-	uint8_t y;
-	//Enemy:: 2BIT 0-1:ORIENTATION; (*May Vary: bit 2&3 Health; 4`5`6:Enemy Type[TEXT_CONTENT]); 7:Valid/Invalid 
-  //Hiro:: 2BIT 0-1:ORIENTATION; bit 2&3 Health; 4:Invincible-Mode 6:AT_END_POSITION(WIN) ; 7:Valid/Invalid 
-	uint8_t property;// 0b000000000 ||DIRECTION: ..00:x++ ..01:y++ ..10:x-- ..11:y-- | 1.... Valid, 0... Invalid
-} ObjectU8_t;
-
-typedef struct OBJ_U16{
-	uint16_t x;
-	uint16_t y;
-	uint8_t property;// 0b000000000 ||DIRECTION: ..00:x++ ..01:y++ ..10:x-- ..11:y-- | 1.... Valid, 0... Invalid
-} ObjectU16_t;
+enum {GM_MENU, GM_RUNNING, GM_PAUSE, GM_END_S, GM_END_F};
+uint8_t m_GAME_STATUS = GM_MENU;
 
 ObjectU8_t Hiro;
 ObjectU16_t Bullets[BULLET_MAX_QUANT];//NOTE: bullet in world coord
@@ -72,21 +33,17 @@ OS_MUT mutex_GMstatus;
 OS_MUT mutex_Portals;
 OS_MUT mutex_Traps;
 //OS_MUT mutex_zombies;
-const uint8_t Temp_enemy_pos[8] = {1,8,7,3,8,1,13,10};
-const uint16_t Temp_rewards_pos[9] = {7,3, TC_PORTAL,8,1, TC_PORTAL, 1,8, TC_POTION};
-const uint8_t m_START_END[4] = {1,1,13,11};
-const uint16_t MAP[MAP_SCRN_H] = {32767, 16385, 24053, 21781, 21845, 21829, 22397, 20485, 22397, 21825, 24029, 16385};
+
 uint16_t map_TEXEL[MAP_TEXEL_AREA] = {0};
 uint16_t prevPotentio = 0;
 uint8_t curJoyCMD = JS_IDLE;
 uint32_t m_Hiro_LastDMGTime = 0;
 uint32_t m_GAME_startTime = 0;
 uint16_t m_GAME_ACCTime = 0;
-enum {GM_MENU, GM_RUNNING, GM_PAUSE, GM_END_S, GM_END_F};
-uint8_t m_GAME_STATUS = GM_RUNNING;
+
 uint8_t screenClear = 0;
 uint8_t Portal_InUse = 0;
-	uint16_t prev_time_needle = 0;
+uint16_t prev_time_needle = 0;
 
 uint8_t GetCurrentGameSTATUS()
 {
@@ -96,6 +53,142 @@ uint8_t GetCurrentGameSTATUS()
 	os_mut_release (&mutex_map_TEXEL);
 	return state;
 }
+
+uint8_t Get_Enemy_Property(uint8_t x, uint8_t y, uint16_t type)
+{
+	uint8_t i, cx, cy, cp;
+	for(i=0;i<ENEMIES_MAX_QUANT;i++)
+	{
+		os_mut_wait (&mutex_Enemies, 0xffff);
+		cx = Enemies[i].x;
+		cy = Enemies[i].y;
+		cp = Enemies[i].property;
+		os_mut_release (&mutex_Enemies);
+		if(cx == x && cy == y && (cp&((1<<7)+((type&(7<<2))<<1)))) //if found, return its property
+		{
+			return cp;//property
+		}
+	}
+	return 0;//Empty
+}
+
+void Kill_Enemies_U16(uint16_t bx, uint16_t by)
+{
+	uint8_t i, cx, cy, cp;
+
+	bx/=MAP_TEXEL_W;
+	by/=MAP_TEXEL_H;
+	for(i=0;i<ENEMIES_MAX_QUANT;i++)
+	{
+		os_mut_wait (&mutex_Enemies, 0xffff);
+		cx = Enemies[i].x;
+		cy = Enemies[i].y;
+		cp = Enemies[i].property;
+		os_mut_release (&mutex_Enemies);
+		if(cx == bx && cy == by && (cp&(1<<7))) //if found, return its property
+		{
+			cp = (cp>>2)&3;//get current health
+			cp = (cp==0)?0:(cp-1);
+			if(cp <= 0)
+			{
+				os_mut_wait (&mutex_Enemies, 0xffff);
+				Enemies[i].x = 0;
+				Enemies[i].y = 0;
+				cp = Enemies[i].property;//record the property for erasing the texture
+				Enemies[i].property = 0;
+				os_mut_release (&mutex_Enemies);
+				Reset_TEXEL_CONTENT(cx, cy, ((cp>>4)&7)<<2);//erase on screen
+			}else
+			{
+				os_mut_wait (&mutex_Enemies, 0xffff);
+				Enemies[i].property &= (~(3<<2));//clear health
+				Enemies[i].property += (cp<<2);//update health
+				os_mut_release (&mutex_Enemies);
+			}
+		}
+	}
+}
+
+void clearTEXEL(unsigned int x, unsigned int y, unsigned int val)
+{
+	GLCD_Bargraph(x*MAP_TEXEL_SIZE, y*MAP_TEXEL_SIZE, MAP_TEXEL_SIZE, MAP_TEXEL_SIZE, val);
+}
+
+TEXEL_CONTENT_t Get_TEXEL_CONTENT(uint8_t x, uint8_t y)
+{
+	uint16_t j = TC_UNKNOWN;
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		j = map_TEXEL[x+y*MAP_SCRN_W];
+		os_mut_release (&mutex_map_TEXEL);
+	}
+	return j;
+}
+
+TEXEL_CONTENT_t Get_TEXEL_CONTENT_16(uint16_t x, uint16_t y)
+{
+	uint16_t j = TC_UNKNOWN;
+	x/=MAP_TEXEL_W;
+	y/=MAP_TEXEL_H;
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		j = map_TEXEL[x+y*MAP_SCRN_W];
+		os_mut_release (&mutex_map_TEXEL);
+	}
+	return j;
+}
+
+uint8_t PathExist_Screen_Space(uint16_t x, uint16_t y)
+{
+	return (!(Get_TEXEL_CONTENT_16(x, y)&TC_WALL));
+}
+
+void Set_TEXEL_CONTENT(uint8_t x, uint8_t y, uint16_t type)
+{
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		map_TEXEL[x+y*MAP_SCRN_W] |= type;
+		os_mut_release (&mutex_map_TEXEL);
+	}
+}
+
+void Reset_TEXEL_CONTENT(uint8_t x, uint8_t y, uint16_t type)
+{
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		map_TEXEL[x+y*MAP_SCRN_W] &= (~type);
+		os_mut_release (&mutex_map_TEXEL);
+	}
+}
+
+void Set_TEXEL_CONTENT_16(uint16_t x, uint16_t y, uint16_t type)
+{
+	x/=MAP_TEXEL_W;
+	y/=MAP_TEXEL_H;
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		map_TEXEL[x+y*MAP_SCRN_W] |= type;
+		os_mut_release (&mutex_map_TEXEL);
+	}
+}
+
+void Reset_TEXEL_CONTENT_16(uint16_t x, uint16_t y, uint16_t type)
+{
+	x/=MAP_TEXEL_W;
+	y/=MAP_TEXEL_H;
+	if(x < MAP_SCRN_W && y < MAP_SCRN_H)
+	{
+		os_mut_wait (&mutex_map_TEXEL, 0xffff);
+		map_TEXEL[x+y*MAP_SCRN_W] &= (~type);
+		os_mut_release (&mutex_map_TEXEL);
+	}
+}
+
 
 __task void Task_MenuUpdate()
 {
@@ -168,140 +261,6 @@ __task void Task_MenuUpdate()
 	}
 }
 
-void clearTEXEL(unsigned int x, unsigned int y, unsigned int val)
-{
-	GLCD_Bargraph(x*MAP_TEXEL_SIZE, y*MAP_TEXEL_SIZE, MAP_TEXEL_SIZE, MAP_TEXEL_SIZE, val);
-}
-
-TEXEL_CONTENT_t Get_TEXEL_CONTENT(uint8_t x, uint8_t y)
-{
-		uint16_t j = TC_UNKNOWN;
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			j = map_TEXEL[x+y*MAP_SCRN_W];
-			os_mut_release (&mutex_map_TEXEL);
-		}
-		return j;
-}
-
-TEXEL_CONTENT_t Get_TEXEL_CONTENT_16(uint16_t x, uint16_t y)
-{
-	  uint16_t j = TC_UNKNOWN;
-		x/=MAP_TEXEL_W;
-		y/=MAP_TEXEL_H;
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			j = map_TEXEL[x+y*MAP_SCRN_W];
-			os_mut_release (&mutex_map_TEXEL);
-		}
-		return j;
-}
-
-uint8_t PathExist_Screen_Space(uint16_t x, uint16_t y)
-{
-		return (!(Get_TEXEL_CONTENT_16(x, y)&TC_WALL));
-}
-
-void Set_TEXEL_CONTENT(uint8_t x, uint8_t y, uint16_t type)
-{
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			map_TEXEL[x+y*MAP_SCRN_W] |= type;
-			os_mut_release (&mutex_map_TEXEL);
-		}
-}
-
-void Reset_TEXEL_CONTENT(uint8_t x, uint8_t y, uint16_t type)
-{
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			map_TEXEL[x+y*MAP_SCRN_W] &= (~type);
-			os_mut_release (&mutex_map_TEXEL);
-		}
-}
-
-void Set_TEXEL_CONTENT_16(uint16_t x, uint16_t y, uint16_t type)
-{
-		x/=MAP_TEXEL_W;
-		y/=MAP_TEXEL_H;
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			map_TEXEL[x+y*MAP_SCRN_W] |= type;
-			os_mut_release (&mutex_map_TEXEL);
-		}
-}
-
-void Reset_TEXEL_CONTENT_16(uint16_t x, uint16_t y, uint16_t type)
-{
-		x/=MAP_TEXEL_W;
-		y/=MAP_TEXEL_H;
-		if(x < MAP_SCRN_W && y < MAP_SCRN_H)
-		{
-			os_mut_wait (&mutex_map_TEXEL, 0xffff);
-			map_TEXEL[x+y*MAP_SCRN_W] &= (~type);
-			os_mut_release (&mutex_map_TEXEL);
-		}
-}
-
-uint8_t Get_Enemy_Property(uint8_t x, uint8_t y, uint16_t type)
-{
-	uint8_t i, cx, cy, cp;
-	for(i=0;i<ENEMIES_MAX_QUANT;i++)
-	{	
-		os_mut_wait (&mutex_Enemies, 0xffff);
-		cx = Enemies[i].x;
-		cy = Enemies[i].y;
-		cp = Enemies[i].property;
-		os_mut_release (&mutex_Enemies);
-		if(cx == x && cy == y && (cp&((1<<7)+((type&(7<<2))<<1)))) //if found, return its property
-		{
-			return cp;//property
-		}
-	}
-	return 0;//Empty
-}
-
-void Kill_Enemies_U16(uint16_t bx, uint16_t by)
-{
-	uint8_t i, cx, cy, cp;
-	
-	bx/=MAP_TEXEL_W;
-	by/=MAP_TEXEL_H;
-	for(i=0;i<ENEMIES_MAX_QUANT;i++)
-	{	
-		os_mut_wait (&mutex_Enemies, 0xffff);
-		cx = Enemies[i].x;
-		cy = Enemies[i].y;
-		cp = Enemies[i].property;
-		os_mut_release (&mutex_Enemies);
-		if(cx == bx && cy == by && (cp&(1<<7))) //if found, return its property
-		{
-			cp = (cp>>2)&3;//get current health
-			cp = (cp==0)?0:(cp-1);
-			if(cp <= 0)
-			{
-				os_mut_wait (&mutex_Enemies, 0xffff);
-				Enemies[i].x = 0;
-				Enemies[i].y = 0;
-				cp = Enemies[i].property;//record the property for erasing the texture
-				Enemies[i].property = 0;
-				os_mut_release (&mutex_Enemies);
-				Reset_TEXEL_CONTENT(cx, cy, ((cp>>4)&7)<<2);//erase on screen
-			}else
-			{
-				os_mut_wait (&mutex_Enemies, 0xffff);
-				Enemies[i].property &= (~(3<<2));//clear health
-				Enemies[i].property += (cp<<2);//update health
-				os_mut_release (&mutex_Enemies);
-			}
-		}
-	}
-}
 
 /*=================================RENDER===================================*/
 __task void Task_Render()
@@ -979,7 +938,6 @@ void start_tasks()
 	os_mut_init (&mutex_Enemies);
 	os_mut_init (&mutex_m_START_END);
 	os_mut_init (&mutex_input);
-	os_mut_init (&mutex_map_TEXEL);
 	os_mut_init (&mutex_Portals);
 	os_mut_init (&mutex_Traps);
 	
