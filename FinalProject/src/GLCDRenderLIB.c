@@ -1,4 +1,5 @@
 #include "GLCDRenderLIB.h"
+#include "GameCommons.h"
 #include <LPC17xx.h>
 #include "stdio.h"
 #include "uart.h"
