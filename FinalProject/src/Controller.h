@@ -1,3 +1,5 @@
+#ifndef SRC_CONTROLLER_H
+#define SRC_CONTROLLER_H
 enum JOYSTICK_STATUS {JS_LEFT = 1, JS_RIGHT = 1<<1, JS_UP = 1<<2, JS_DOWN = 1<<3, JS_PRESSED = 1<<4, JS_IDLE = 0};
 
 //JS
@@ -13,3 +15,4 @@ void logPotetiometer(void);
 //PB
 void initPushBtn(void);
 uint8_t readPushBtn(void);
+#endif //SRC_CONTROLLER_H

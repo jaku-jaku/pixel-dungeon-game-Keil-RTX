@@ -1,4 +1,5 @@
 #include "GLCDRenderLIB.h"
+#include "GameCommons.h"
 #include <LPC17xx.h>
 #include "stdio.h"
 #include "uart.h"
@@ -157,25 +158,25 @@ unsigned short bitmap_potion[MAP_TEXEL_AREA] =
 
 
 unsigned short bitmap_portal[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
-								 W,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,W,
-								 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
-								 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
-								 W,B,W,W,B,B,B,B,B,B,B,B,B,B,B,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,B,B,B,B,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,B,W,W,B,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,B,W,W,B,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,B,B,B,B,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
-								 W,B,W,W,B,B,B,B,B,B,B,B,B,B,B,B,W,W,B,W,
-								 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
-								 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
-								 W,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,W,
-								 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //portal
+																	 W,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,W,
+																	 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
+																	 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
+																	 W,B,W,W,B,B,B,B,B,B,B,B,B,B,B,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,B,B,B,B,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,B,W,W,B,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,B,W,W,B,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,B,B,B,B,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,P,P,P,P,P,P,P,P,P,P,B,W,W,B,W,
+																	 W,B,W,W,B,B,B,B,B,B,B,B,B,B,B,B,W,W,B,W,
+																	 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
+																	 W,B,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,B,W,
+																	 W,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,B,W,
+																	 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W}; //portal
 
 //unsigned short bitmap_bullet_clip[] = {W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,
 //								 W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,

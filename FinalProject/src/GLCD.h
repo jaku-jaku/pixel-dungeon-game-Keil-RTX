@@ -56,7 +56,7 @@ extern void GLCD_Bitmap_Yfliped (unsigned int x, unsigned int y, unsigned int w,
 extern void GLCD_Bitmap_XYfliped(unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned char *bitmap);
 extern void GLCD_Bitmap_ROT     (unsigned int x, unsigned int y, unsigned int w, unsigned int h, unsigned int rot, unsigned char *bitmap);
 extern void GLCD_ScrollVertical (unsigned int dy);
-
+extern void GLCD_Ptergraph 			(unsigned int x, unsigned int y, unsigned int r, int dx, int dy, unsigned int dir);
 extern void GLCD_WrCmd          (unsigned char cmd);
 extern void GLCD_WrReg          (unsigned char reg, unsigned short val); 
 
