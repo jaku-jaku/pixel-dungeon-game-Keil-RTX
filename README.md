@@ -1,5 +1,5 @@
 # Final project for MTE241
-Pixel Dungeon Game
-
+## Pixel Dungeon Game
 Demo:
+
 ![Alt Text](demo.gif)
